@@ -19,7 +19,8 @@ class NumberDisplayAdapter (_numbers: Array<Int>) : RecyclerView.Adapter<NumberD
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
         return NumberViewHolder(
             TextView(parent.context).apply {
-                layoutParams = ViewGroup.LayoutParams(100, 100)
+                setPadding(5, 10, 0, 10)
+                //layoutParams = ViewGroup.LayoutParams(100, 100)
             }
         )
     }
@@ -30,6 +31,7 @@ class NumberDisplayAdapter (_numbers: Array<Int>) : RecyclerView.Adapter<NumberD
 
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
         holder.textView.text = numbers[position].toString()
+        holder.textView.textSize = numbers[position].toFloat()
     }
 
 
