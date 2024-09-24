@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //TODO Step 4: Provide a RecyclerView.Adapter
-        var numbers = arrayOf(1,2,3,4,5,6,7,8,9)
+        var numbers = Array(50){i -> (i + 1) * 2}
         recyclerView.adapter = NumberDisplayAdapter(numbers)
 
     }
